@@ -1,28 +1,23 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
-
-# Flask + Vercel
-
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
-
-## Demo
-
-https://flask-python-template.vercel.app/
-
-## How it Works
-
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
-
-## Running Locally
-
-```bash
-npm i -g vercel
-vercel dev
-```
-
-Your Flask application is now available at `http://localhost:3000`.
-
-## One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# PA053 Homework 3 — REST Service
+ 
+A simple REST service built with Flask and deployed on Vercel.
+ 
+## Endpoints
+ 
+The service accepts GET requests on `/` with exactly one of the following query parameters:
+ 
+| Parameter | Description | Example |
+|---|---|---|
+| `queryAirportTemp` | Returns current temperature (°C) at the given IATA airport code | `?queryAirportTemp=PRG` |
+| `queryStockPrice` | Returns current stock price for the given ticker symbol | `?queryStockPrice=AAPL` |
+| `queryEval` | Evaluates an arithmetic expression (supports `+`, `-`, `*`, `/`, parentheses) | `?queryEval=10+(5*2)` |
+ 
+## Response format
+ 
+All responses are returned as `application/json` containing the numeric result.
+ 
+## Data sources
+ 
+- Airport coordinates: [airport-data.com](https://airport-data.com)
+- Weather data: [Open-Meteo](https://open-meteo.com)
+- Stock prices: [yfinance](https://github.com/ranaroussi/yfinance)
